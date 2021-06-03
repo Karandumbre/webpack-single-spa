@@ -1,0 +1,48 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@babel/core": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-env": "^7.4.5",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^1.0.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-server": "^0.1.2",
+    "serve": "^11.3.0",
+    "single-spa-react": "^2.11.1"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 8084"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
