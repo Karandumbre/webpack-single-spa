@@ -42,7 +42,7 @@ module.exports = {
       name: "LOGIN",
       filename: "remoteEntry.js",
       remotes: {
-        HEADER: "APP@http://localhost:8087/remoteEntry.js",
+        HEADER: "HEADER@http://localhost:8087/remoteEntry.js",
         STORE: "STORE@http://localhost:8086/remoteEntry.js",
       },
       exposes: {

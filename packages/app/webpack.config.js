@@ -2,8 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
-const deps = require("./package.json").dependencies;
-
 module.exports = {
   mode: "development",
   devServer: {
@@ -42,14 +40,13 @@ module.exports = {
       name: "APP",
       filename: "remoteEntry.js",
       remotes: {
-        HEADER: "LOGIN@http://localhost:8087/remoteEntry.js",
+        HEADER: "HEADER@http://localhost:8087/remoteEntry.js",
         LOGIN: "LOGIN@http://localhost:8083/remoteEntry.js",
         SIGNUP: "SIGNUP@http://localhost:8085/remoteEntry.js",
         DASHBOARD: "DASHBOARD@http://localhost:8084/remoteEntry.js",
         STORE: "STORE@http://localhost:8086/remoteEntry.js",
       },
       exposes: {},
-      shared: [],
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({

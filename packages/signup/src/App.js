@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
-import singleSpaReact from 'single-spa-react';
+import ReactDOM from "react-dom";
+import singleSpaReact from "single-spa-react";
 import { Provider } from "react-redux";
 import { createLogger } from "redux-logger";
 import reducers from "./smart-components/reducers";
@@ -9,7 +9,7 @@ import configureStore, {
   configureMiddlewares,
   configureReducers,
 } from "./smart-components/store";
-// import SignUp from './SignUp';
+import SignUp from "./SignUp";
 
 configureMiddlewares(createLogger());
 configureMiddlewares(middleware);
@@ -19,7 +19,7 @@ function App() {
   const appStore = configureStore();
   return (
     <Provider store={appStore}>
-      {/* <SignUp /> */}
+      <SignUp />
     </Provider>
   );
 }
@@ -28,7 +28,7 @@ function App() {
 const signUpAppLifecycles = singleSpaReact({
   React,
   ReactDOM,
-  rootComponent: App
+  rootComponent: App,
 });
 
 export const bootstrap = signUpAppLifecycles.bootstrap;

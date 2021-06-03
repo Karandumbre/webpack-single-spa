@@ -10,19 +10,19 @@ registerApplication(
 registerApplication(
   "login",
   () => import("LOGIN/Login"),
-  (location) => location.pathname.startsWith('/login')
+  (location) => location.pathname.startsWith("/")
 );
 
 registerApplication(
   "dashboard",
   () => import("DASHBOARD/Dashboard"),
-  (location) => location.pathname.startsWith('/home')
+  (location) => location.pathname.startsWith("/")
 );
 
 registerApplication(
   "signup",
   () => import("SIGNUP/SignUp"),
-  (location) => location.pathname.startsWith('/register')
+  (location) => location.pathname.startsWith("/")
 );
 
 start();
