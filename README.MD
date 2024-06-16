@@ -6,6 +6,7 @@ This repository contains a micro-frontend architecture implementation using Webp
 
 The project is structured into multiple packages, each representing a different part of the application:
 
+```
 webpack-single-spa
 |-- packages
 | |-- app
@@ -16,7 +17,7 @@ webpack-single-spa
 | |--store
 |-- .gitignore
 |-- package.json
-
+```
 ### Main `package.json`
 
 ```json
