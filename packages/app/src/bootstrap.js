@@ -16,13 +16,13 @@ registerApplication(
 registerApplication(
   "dashboard",
   () => import("DASHBOARD/Dashboard"),
-  (location) => location.pathname.startsWith('/home')
+  (location) => location.pathname.startsWith("/home")
 );
 
 registerApplication(
   "signup",
   () => import("SIGNUP/SignUp"),
-  (location) => location.pathname.startsWith('/register')
+  (location) => location.pathname.startsWith("/register")
 );
 
 start();
